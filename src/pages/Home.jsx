@@ -7,9 +7,18 @@ import NewItems from "../components/home/NewItems";
 import TopSellers from "../components/home/TopSellers";
 
 const Home = () => {
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
+
   useEffect(() => {
+  const el = document.getElementById("section-collections");
+  if (el) {
+    el.scrollIntoView();
+  } else {
     window.scrollTo(0, 0);
-  }, []);
+  }
+}, []);
 
   return (
     <div id="wrapper">
