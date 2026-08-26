@@ -11362,7 +11362,7 @@ section.no-padding {
 .d-nav-right {
   cursor: pointer;
   position: absolute;
-  top: 37.5%;
+  top: 41%;
   z-index: 100;
   width: 45px;
   height: 45px;
@@ -11400,14 +11400,14 @@ section.no-padding {
 
 .owl-prev,
 .d-nav-left {
-  left: -12px;
+  left: -23px;
   border-radius: 60px;
   padding-left: 4px;
 }
 
 .owl-next,
 .d-nav-right {
-  right: -12px;
+  right: -23px;
   border-radius: 60px;
   padding-right: 4px;
 }
@@ -13206,7 +13206,7 @@ a.read_more i {
 .nft_wrap {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 200%;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
@@ -14413,7 +14413,7 @@ a.read_more i {
       0 0 0 5em rgba(255, 255, 255, 0.3);
   }
   100% {
-    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.3),
+   box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.3),
       0 0 0 3em rgba(255, 255, 255, 0.3), 0 0 0 5em rgba(255, 255, 255, 0.3),
       0 0 0 8em rgba(255, 255, 255, 0);
   }
@@ -16648,6 +16648,74 @@ img {
     left: 0;
     top: -21px;
   }
+}
+
+.skeleton-carousel-wrap {
+  position: relative;
+}
+
+.skeleton-carousel-track {
+  display: flex;
+  gap: 10px;
+}
+
+.skeleton-nft-wrap {
+  aspect-ratio: 314.5 / 177.16;
+  height: auto; /* let aspect-ratio drive it instead of a fixed px value */
+}
+
+.skeleton-tile {
+  flex: 0 0 calc(25% - 7.5px);
+}
+
+@media (max-width: 999px) {
+  .skeleton-tile {
+    flex-basis: calc(33.333% - 7px);
+  }
+  .skeleton-tile:nth-child(n + 4) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .skeleton-tile {
+    flex-basis: calc(50% - 5px);
+  }
+  .skeleton-tile:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .skeleton-tile {
+    flex-basis: 100%;
+  }
+  .skeleton-tile:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+.skeleton-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.skeleton-title {
+  width: 70%;
+  height: 16px;
+  margin: 0 auto;
+}
+
+.skeleton-subtitle {
+  width: 40%;
+  height: 14px;
+  margin: 6px auto 0;
+}
+
+.skeleton-carousel-wrap .owl-nav button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .skeleton-box {
