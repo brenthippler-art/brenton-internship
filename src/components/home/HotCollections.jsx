@@ -39,7 +39,20 @@ const HotCollections = () => {
 
           <div className="col-lg-12">
             {data.length === 0 ? (
-              <SkeletonCarousel count={4} />
+              <SkeletonCarousel
+                count={4}
+                tileConfig={{
+                  wrapperClass: "nft_coll",
+                  imageAspectRatio: "314.5 / 177.16",
+                  hasAvatar: true,
+                  avatarSize: "60px",
+                  hasCheckIcon: true,
+                  lines: [
+                    { width: "70%", height: "16px" },
+                    { width: "40%", height: "14px" },
+                  ],
+                }}
+              />
             ) : (
               <OwlCarousel
                 key={data.length}
