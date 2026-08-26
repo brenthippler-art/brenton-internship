@@ -27,8 +27,6 @@ const NewItems = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  console.log(data);
-
   return (
     <section id="section-items" className="no-bottom">
       <div className="container">
