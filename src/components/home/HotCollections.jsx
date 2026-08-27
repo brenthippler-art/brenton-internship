@@ -47,6 +47,7 @@ const HotCollections = () => {
                   hasAvatar: true,
                   avatarSize: "60px",
                   hasCheckIcon: true,
+                  avatarPosition: "after",
                   lines: [
                     { width: "70%", height: "16px" },
                     { width: "40%", height: "14px" },
