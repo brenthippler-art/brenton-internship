@@ -48,6 +48,7 @@ const NewItems = () => {
                   hasAvatar: true,
                   avatarSize: "50px",
                   hasCheckIcon: true,
+                  avatarPosition: "before",
                   lines: [
                     { width: "70%", height: "16px" },
                     { width: "50%", height: "14px" },
