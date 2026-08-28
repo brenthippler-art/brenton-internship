@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const TopSellerTile = ({ item }) => (
-  <li>
+  <li data-aos="fade-up">
     <div className="author_list_pp">
       <Link to={`/author/${item.authorId}`}>
         <img className="lazy pp-author" src={item.authorImage} alt="" />

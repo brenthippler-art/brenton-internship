@@ -33,7 +33,7 @@ const CountdownTimer = ({ expiryDate }) => {
   }
 
   return (
-    <div className="de_countdown">
+    <div className="de_countdown" data-aos="fade-up">
       {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
     </div>
   );
