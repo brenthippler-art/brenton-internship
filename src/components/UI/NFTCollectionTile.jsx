@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const NftCollectionTile = ({ item }) => (
-  <div className="nft_coll">
+  <div className="nft_coll" data-aos="fade-up">
     <div className="nft_wrap">
       <Link to={`/item-details/${item.nftId}`}>
         <img src={item.nftImage} className="lazy img-fluid" alt="" />

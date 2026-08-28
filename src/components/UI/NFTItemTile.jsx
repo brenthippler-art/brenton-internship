@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 
 const NftItemTile = ({ item }) => (
-  <div className="nft__item">
+  <div className="nft__item" data-aos="fade-up">
     <div className="author_list_pp">
       <Link
         to={`/author/${item.authorId}`}
