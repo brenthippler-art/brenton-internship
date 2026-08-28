@@ -10196,6 +10196,8 @@ re
   padding: 8px 40px;
   font-size: 14px;
   border: none;
+  margin-bottom: 90px;
+  margin-top: 8px;
 }
 
 .more-btn:hover {
@@ -15465,6 +15467,7 @@ img {
 
 /* ================================================== */
 
+
 @media (min-width: 980px) and (max-width: 1199px) {
   #mainmenu li a:after {
     margin-left: 15px;
@@ -16899,5 +16902,23 @@ img {
   }
   .skeleton-carousel-track .skeleton-tile:nth-child(n + 2) {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .nft__item_wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ddd;
+  }
+
+  .nft__item_wrap a {
+    height: 100%;
+  }
+
+  .nft__item_wrap .nft__item_preview {
+    height: 100% !important;
+    width: 100%;
+    object-fit: contain;
   }
 }

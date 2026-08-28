@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import SkeletonCarousel, { SkeletonList } from "../UI/SkeletonCarousel";
+import TopSellerTile from "../UI/TopSellerTile";
 
 const TOP_SELLERS_URL =
   "https://us-central1-nft-cloud-functions.cloudfunctions.net/topSellers";
@@ -46,24 +46,7 @@ const TopSellers = () => {
             ) : (
               <ol className="author_list">
                 {data.map((item) => (
-                  <li key={item.id}>
-                    <div className="author_list_pp">
-                      <Link to={`/author/${item.authorId}`}>
-                        <img
-                          className="lazy pp-author"
-                          src={item.authorImage}
-                          alt=""
-                        />
-                        <i className="fa fa-check"></i>
-                      </Link>
-                    </div>
-                    <div className="author_list_info">
-                      <Link to={`/author/${item.authorId}`}>
-                        {item.authorName}
-                      </Link>
-                      <span>{item.price} ETH</span>
-                    </div>
-                  </li>
+                  <TopSellerTile item={item} key={item.id} />
                 ))}
               </ol>
             )}
