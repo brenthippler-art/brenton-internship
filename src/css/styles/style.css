@@ -10162,7 +10162,7 @@ i.bg-color-secondary {
 .tooltip.bs-tooltip-end .tooltip-arrow::before {
   box-shadow: 0 0.25rem 0.5rem rgb(0 0 0 / 5%), 0 1.5rem 2.2rem rgb(0 0 0 / 10%);
 }
-
+re
 #item-carousel-big {
   padding: 0 25px;
 }
@@ -10181,6 +10181,28 @@ i.bg-color-secondary {
 #loadmore {
   display: inline-block;
   margin-top: 10px;
+}
+
+.more-btn {
+  background-color: rgba(131, 100, 226);
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  outline: 0;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 8px 40px;
+  font-size: 14px;
+  border: none;
+}
+
+.more-btn:hover {
+  color: #fff;
+  -webkit-box-shadow: 2px 2px 20px 0px rgba(var(--secondary-color-rgb), 0.5);
+  -moz-box-shadow: 2px 2px 20px 0px rgba(var(--secondary-color-rgb), 0.5);
+  box-shadow: 2px 2px 20px 0px rgba(var(--secondary-color-rgb), 0.5);
 }
 
 .d-item {

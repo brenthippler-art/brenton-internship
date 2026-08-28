@@ -76,4 +76,14 @@ export const SkeletonList = ({ count = 12, tileConfig }) => (
   </ol>
 );
 
+export const SkeletonGrid = ({ count = 8, tileConfig, colClass = "col-lg-3 col-md-6 col-sm-6 col-xs-12" }) => (
+  <div className="row">
+    {Array.from({ length: count }, (_, index) => (
+      <div className={colClass} key={index}>
+        <SkeletonTile {...tileConfig} />
+      </div>
+    ))}
+  </div>
+);
+
 export default SkeletonCarousel;

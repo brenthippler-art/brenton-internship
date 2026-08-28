@@ -87,18 +87,7 @@ const NewItems = () => {
                     </div>
                     <CountdownTimer expiryDate={item.expiryDate} />
 
-                    <div className="nft__item_wrap">
-                      <div className="nft__item_extra">
-                        <div className="nft__item_buttons">
-                          <button>Buy Now</button>
-                          <div className="nft__item_share">
-                            <h4>Share</h4>
-                            <a href="" target="blank" rel="noreferrer">
-                              <i className="fa fa-facebook fa-Ig"></i>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="nft__item_wrap">                      
                       <Link to={`/item-details/${item.nftId}`}>
                         <img
                           src={item.nftImage}
