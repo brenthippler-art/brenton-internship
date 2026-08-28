@@ -5,6 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import SkeletonCarousel from "../UI/SkeletonCarousel";
+import NFTCollectionTile from "../UI/NFTCollectionTile";
 
 const HOT_COLLECTIONS_URL =
   "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections";
@@ -67,33 +68,7 @@ const HotCollections = () => {
                 responsive={CAROUSEL_RESPONSIVE}
               >
                 {data.map((item) => (
-                  <div className="nft_coll" key={item.id}>
-                    <div className="nft_wrap">
-                      <Link to="/item-details">
-                        <img
-                          src={item.nftImage}
-                          className="lazy img-fluid"
-                          alt=""
-                        />
-                      </Link>
-                    </div>
-                    <div className="nft_coll_pp">
-                      <Link to="/author">
-                        <img
-                          className="lazy pp-coll"
-                          src={item.authorImage}
-                          alt=""
-                        />
-                      </Link>
-                      <i className="fa fa-check"></i>
-                    </div>
-                    <div className="nft_coll_info">
-                      <Link to="/explore">
-                        <h4>{item.title}</h4>
-                      </Link>
-                      <span>ERC-{item.code}</span>
-                    </div>
-                  </div>
+                  <NFTCollectionTile item={item} key={item.id} />
                 ))}
               </OwlCarousel>
             )}

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import SkeletonCarousel from "../UI/SkeletonCarousel";
-import CountdownTimer from "../UI/CountdownTimer";
+import NftItemTile from "../UI/NFTItemTile";
 
 const NEW_ITEMS_URL =
   "https://us-central1-nft-cloud-functions.cloudfunctions.net/newItems";
@@ -73,40 +72,7 @@ const NewItems = () => {
                 responsive={CAROUSEL_RESPONSIVE}
               >
                 {data.map((item) => (
-                  <div className="nft__item" key={item.id}>
-                    <div className="author_list_pp">
-                      <Link
-                        to={`/author/${item.authorId}`}
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title={`Creator: ${item.title}`}
-                      >
-                        <img className="lazy" src={item.authorImage} alt="" />
-                        <i className="fa fa-check"></i>
-                      </Link>
-                    </div>
-                    <CountdownTimer expiryDate={item.expiryDate} />
-
-                    <div className="nft__item_wrap">                      
-                      <Link to={`/item-details/${item.nftId}`}>
-                        <img
-                          src={item.nftImage}
-                          className="lazy nft__item_preview"
-                          alt=""
-                        />
-                      </Link>
-                    </div>
-                    <div className="nft__item_info">
-                      <Link to={`/item-details/${item.nftId}`}>
-                        <h4>{item.title}</h4>
-                      </Link>
-                      <div className="nft__item_price">{item.price} ETH</div>
-                      <div className="nft__item_like">
-                        <i className="fa fa-heart"></i>
-                        <span>{item.likes}</span>
-                      </div>
-                    </div>
-                  </div>
+                  <NftItemTile item={item} key={item.id} />
                 ))}
               </OwlCarousel>
             )}
